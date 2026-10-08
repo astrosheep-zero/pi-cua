@@ -1,0 +1,43 @@
+{
+  "name": "@astrosheep/pi-cua",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Native macOS Computer Use for Pi through the official signed Sky execution runtime",
+  "type": "module",
+  "keywords": [
+    "pi-package"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check:load": "pi --no-extensions -e ./src/index.ts --list-models __load_check__",
+    "smoke": "node --experimental-strip-types scripts/probe.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.31.0"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.0.0",
+    "@earendil-works/pi-tui": "1.0.0",
+    "@types/node": "^22.0.0",
+    "typebox": "^1.3.34",
+    "typescript": "^6.0.3"
+  }
+}
