@@ -1,8 +1,13 @@
 {
   "name": "@astrosheep/pi-cua",
   "version": "0.2.0",
-  "private": true,
   "description": "Native macOS Computer Use for Pi through the official signed Sky execution runtime",
+  "license": "MIT",
+  "homepage": "https://github.com/astrosheep-zero/pi-cua",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astrosheep-zero/pi-cua.git"
+  },
   "type": "module",
   "keywords": [
     "pi-package"
@@ -16,6 +21,9 @@
     "src",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=22.18"
   },
